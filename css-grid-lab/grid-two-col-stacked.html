@@ -33,6 +33,42 @@
       max-width: 80vw;
       margin: 20px auto;
     }
+    /* solution */
+
+main {
+  display: grid;
+  gap: 20px;
+  max-width: 80vw;
+  margin: 20px auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "header  header"
+    "content blog"
+    "content sidebar"
+    "footer  footer";
+}
+header.primary { 
+  grid-area: header; 
+}
+
+#content { 
+  grid-area: content; 
+}
+
+#blog { 
+  grid-area: blog; 
+}
+
+aside { 
+  grid-area: sidebar; 
+}
+
+footer.primary { 
+  grid-area: footer; 
+}
+h1, h2 {
+  margin-top: 0;
+}
   </style>
 
 </head>
